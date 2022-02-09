@@ -1,0 +1,93 @@
+.accordion {
+  width: 70rem;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+
+  @include respond(tab-port) {
+    width: 100%;
+  }
+
+  &__header {
+    padding: 1rem 4rem;
+    background-color: $color-secondary-1;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: $color-secondary-3;
+      background-image: none;
+    }
+
+    @include respond(tab-port) {
+      font-size: $default-font-size;
+    }
+
+    @include respond(phone) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__open {
+    width: 1.75rem;
+    height: 1.75rem;
+    position: absolute;
+    top: 2.8rem;
+    left: 2.3rem;
+    transform: translate(-50%, -50%);
+    color: $color-secondary-1;
+
+    @include respond(tab-port) {
+      top: 2.5rem;
+    }
+
+    @include respond(phone) {
+      top: 2.3rem;
+    }
+  }
+
+  &__panel {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__body {
+    padding: 1rem 2rem;
+    text-align: left;
+    color: $color-grey-light-2;
+
+    @include respond(phone-big) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__panel > &__body {
+    display: none;
+  }
+
+  &__panel.accordion-expanded > &__body {
+    display: block;
+  }
+
+  &__icon {
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+
+    @include respond(tab-port) {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+
+    @include respond(phone-big) {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.team {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-gap: 5rem;
+  align-items: center;
+
+  @include respond(tab-port) {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 3rem;
+  }
+
+  &__img {
+    width: 20rem;
+    border-radius: 30rem;
+
+    @include respond(phone-big) {
+      width: 18rem;
+    }
+  }
+
+  &__name {
+    font-size: 4.4rem;
+    color: $color-secondary-1;
+    font-weight: 700;
+    display: block;
+
+    @include respond(phone-big) {
+      font-size: 4rem;
+    }
+
+    @include respond(phone-small) {
+      font-size: 3.4rem;
+    }
+  }
+
+  &__email {
+    color: $color-grey-light-1;
+    text-decoration: none;
+    transition: 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__social-box {
+    margin-top: 2rem;
+  }
+
+  &__social-link {
+    text-decoration: none;
+    color: $color-grey-light-1;
+  }
+
+  &__social-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+//Slider
+.swiper {
+  &__slide {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+}
+
+.swiper-slide {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center;
+
+  -webkit-filter: grayscale(100%) !important;
+  filter: grayscale(100%) !important;
+  opacity: 0.8 !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-slide-active {
+  -webkit-filter: grayscale(0) !important;
+  filter: grayscale(0) !important;
+  opacity: 1 !important;
+}
+
+//Slider Pagination
+.swiper-pagination-bullets {
+  position: relative;
+  margin-top: 4rem;
+}
+
+.swiper-pagination-bullet {
+  background-color: $color-grey-light-1;
+  width: 1.1rem;
+  height: 1.1rem;
+
+  &:not(:last-child) {
+    margin-right: 0.5rem !important;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-secondary-1;
+  opacity: 1;
+}

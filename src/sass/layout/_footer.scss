@@ -1,0 +1,123 @@
+.footer {
+  padding: 6rem 0;
+  background-color: $color-grey-dark-2;
+
+  @include respond(tab-land-big) {
+    padding: 6rem 3rem;
+  }
+
+  @include respond(phone-big) {
+    padding: 6rem 1rem 1.5rem;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__el-left {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+
+    @include respond(tab-port) {
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__el-right {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @include respond(tab-port) {
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    width: 10rem;
+    margin-bottom: 2rem;
+  }
+  //Nav
+  &__nav {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__nav-item {
+    text-decoration: none;
+    color: $color-grey-light-1;
+    font-size: 2rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    @include respond(phone-big) {
+      font-size: 1.5rem;
+    }
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+
+      @include respond(phone-big) {
+        margin-right: 1.5rem;
+      }
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  //Social
+  &__social {
+    margin-bottom: 1rem;
+    text-align: right;
+  }
+
+  &__social-link {
+    text-decoration: none;
+    color: $color-grey-light-1;
+
+    &:not(:last-child) {
+      margin-right: 0.75rem;
+    }
+  }
+
+  &__social-icon {
+    fill: $color-grey-light-1;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    @include respond(phone-big) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    &:hover {
+      opacity: 0.8;
+      transform: translateY(-2px);
+    }
+  }
+
+  //Copyright
+  &__copyright {
+    font-size: $default-font-size;
+
+    @include respond(phone-big) {
+      font-size: 1.5rem;
+    }
+  }
+}

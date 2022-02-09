@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+
+    <!--Swipe-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  </head>
+
+  <body>
+    <!--Header-->
+    <header class="header">
+      <!--Navbar-->
+      <div class="navbar">
+        <div class="row">
+          <!--Hamburger Menu-->
+          <div class="hamburger-menu">
+            <div class="hamburger-menu__line hamburger-menu__line--1"></div>
+            <div class="hamburger-menu__line hamburger-menu__line--2"></div>
+            <div class="hamburger-menu__line hamburger-menu__line--3"></div>
+          </div>
+
+          <div class="overlay">&nbsp;</div>
+          
+          <!--Navigation-->
+          <ul class="nav">
+            <img class="logo__mobile" src="img/magnoverse_symbol.svg" alt="Magnoverse">
+            <li class="nav__item home-btn">Home</li>
+            <li class="nav__item about-btn">About</li>
+            <li class="nav__item roadmap-btn">Roadmap</li>
+            <li class="nav__item team-btn">Team</li>
+            <li class="nav__item faq-btn">Faq</li>
+            <li class="nav__item contact-btn">Contact</li>
+
+            <!--Social-->
+            <div class="social social--mobile">
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use xlink:href="img/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use xlink:href="img/sprite.svg#discord"></use>
+                </svg>
+              </a>
+              <a class="social__link" href="#">
+                <svg class="social__icon">
+                  <use xlink:href="img/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+            </div>
+          </ul>
+
+          <a class="btn btn--secondary" href="#">Button Secondary</a>
+        </div>
+      </div>
+
+      <!--Header Elements-->
+      <div class="header__elements" id="sticky">
+        <!--Logo-->
+        <figure class="logo">
+          <img class="logo__img" src="img/magnoverse.svg" alt="Magnoverse">
+        </figure>
+
+        <p class="paragraph mb-hg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt ut nibh sit amet volutpat. Fusce id arcu sed odio consequat mollis at ut tortor. In sit amet blandit nibh.</p>
+        <a class="btn btn--primary" href="#">Button Primary</a>
+      </div>
+
+      <div class="header__move-btn">
+        <svg class="header__move-btn-icon">
+          <use xlink:href="img/sprite.svg#chevron-down"></use>
+        </svg>
+      </div>
+    </header>
+
+    <!--Section About-->
+    <section class="section-about">
+      <div class="row">
+        <div>
+          <div class="composition">
+            <img srcset="img/content_img_1.jpg 300w, img/nat-1-large.jpg 1000w"
+                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                 alt="Photo 1"
+                 class="composition__photo composition__photo--p1"
+                 src="img/content_img_1.jpg">
+
+            <img srcset="img/content_img_2.jpg 300w, img/nat-2-large.jpg 1000w"
+                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                 alt="Photo 2"
+                 class="composition__photo composition__photo--p2"
+                 src="img/content_img_2.jpg">
+
+            <img srcset="img/content_img_3.jpg 300w, img/nat-3-large.jpg 1000w"
+                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                 alt="Photo 3"
+                 class="composition__photo composition__photo--p3"
+                 src="img/content_img_3.jpg">
+        </div>
+        </div>
+
+        <div>
+          <h1 class="heading-primary">Aenean auctor dui a est fermentum</h1>
+          <h4 class="heading-4 mb-md">Imperdiet sem eget, egestas sapien</h4>
+          <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error velit aperiam deserunt assumenda distinctio unde debitis, iste, voluptatem quibusdam ab, reiciendis hic voluptate quo. Suscipit consectetur autem odit porro officia!</p>
+          <a class="btn btn--primary" href="#">Discover More</a>
+        </div>
+      </div>
+    </section>
+
+    <!--Roadmap-->
+    <section class="section-roadmap">
+      <div class="row">
+        <h3 class="heading-tertiary">Roadmap</h3>
+        <h4 class="heading-4 mb-hg">Imperdiet sem eget, egestas sapien</h4>
+        <img class="roadmap-background" src="img/magnoverse_symbol.svg" alt="Magnoverse Symbol">
+
+        <div class="roadmap-container">
+          <div class="roadmap">
+            <span class="roadmap__num">01</span>
+            <div class="roadmap__content">
+              <h5 class="heading-5">Praesent faucibus dolor vitae elit auctor convallis non sit amet massa</h5>
+              <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus augue velit, non aliquet leo varius non. Praesent porta magna nibh, a interdum nibh egestas nec. Praesent semper hendrerit felis, vel gravida justo vulputate non. Proin interdum nisi malesuada consequat luctus. Etiam eu eleifend nisl.</p>
+            </div>
+          </div>
+
+          <div class="roadmap">
+            <span class="roadmap__num">02</span>
+            <div class="roadmap__content">
+              <h5 class="heading-5">Vivamus quis est facilisis, efficitur eros eget</h5>
+              <p class="paragraph">Curabitur laoreet placerat orci, in lacinia velit. Praesent faucibus dolor vitae elit auctor convallis non sit amet massa. Aliquam id nisl hendrerit, imperdiet sem eget, egestas sapien.</p>
+            </div>
+          </div>
+
+          <div class="roadmap">
+            <span class="roadmap__num">03</span>
+            <div class="roadmap__content">
+              <h5 class="heading-5">Curabitur laoreet placerat orci</h5>
+              <p class="paragraph">Aliquam sed neque sit amet odio imperdiet consequat. Donec egestas tellus in arcu rutrum, at tincidunt magna porttitor. In varius, nunc pellentesque pulvinar ultrices, sem massa lacinia risus, sit amet faucibus lorem felis sed diam. Proin lobortis urna nisi, ut porta magna tristique.</p>
+            </div>
+          </div>
+
+          <div class="roadmap">
+            <span class="roadmap__num">04</span>
+            <div class="roadmap__content">
+              <h5 class="heading-5">Sed magna enim, varius sed</h5>
+              <p class="paragraph">Maecenas gravida felis a scelerisque molestie. Quisque facilisis erat vitae mattis ullamcorper. Integer volutpat suscipit mi eu molestie. Suspendisse a arcu vel quam pretium auctor ac quis nibh. Phasellus luctus turpis ligula.</p>
+            </div>
+          </div>
+
+          <div class="roadmap">
+            <span class="roadmap__num">05</span>
+            <div class="roadmap__content">
+              <h5 class="heading-5">Why play at South African online casinos?</h5>
+              <p class="paragraph">Aenean auctor dui a est fermentum, finibus eleifend odio pharetra. Vivamus et tortor at ligula aliquet varius vel vitae dolor. Nullam at turpis a ex aliquet ornare. Fusce volutpat ligula ut diam lacinia, non rutrum felis semper. Quisque ornare consectetur purus, condimentum consequat lorem fermentum et. Nunc ipsum felis, convallis in faucibus.</p>
+            </div>
+          </div>
+
+          <div class="roadmap">
+            <span class="roadmap__num">06</span>
+            <div class="roadmap__content">
+              <h5 class="heading-5">Aliquam id nisl hendrerit, imperdiet sem eget, egestas sapien</h5>
+              <p class="paragraph">Sed magna enim, varius sed hendrerit in, semper convallis nunc. Fusce id viverra felis. Nulla facilisi. Vestibulum at semper purus, sit amet bibendum eros. Maecenas at sapien arcu. Nulla vitae sodales nulla, eu blandit justo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Team-->
+    <section class="section-team">
+      <div class="row">
+        <h3 class="heading-tertiary mb-lg">Our Team</h3>
+        <!-- Slider main container -->
+        <div class="swiper slider">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide slider__slide">
+              <div class="team">
+                <img class="team__img" src="img/team_member.jpg" alt="Team member">
+                <div class="team__info">
+                  <span class="team__name">Name Lastname</span>
+                  <a class="team__email" href="mailto:email@magnoverse.io">email@magnoverse.io</a>
+                  <div class="team__social-box">
+                    <a class="team__social-link" href="#">
+                      <svg class="team__social-icon">
+                        <use xlink:href="img/sprite.svg#twitter"></use>
+                      </svg>
+                      <svg class="team__social-icon">
+                        <use xlink:href="img/sprite.svg#telegram"></use>
+                      </svg>
+                      <svg class="team__social-icon">
+                        <use xlink:href="img/sprite.svg#discord"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="team">
+                <img class="team__img" src="img/team_member.jpg" alt="Team member">
+                <div class="team__info">
+                  <span class="team__name">Name Lastname</span>
+                  <a class="team__email" href="mailto:email@magnoverse.io">email@magnoverse.io</a>
+                  <div class="team__social-box">
+                    <a class="team__social-link" href="#">
+                      <svg class="team__social-icon">
+                        <use xlink:href="img/sprite.svg#twitter"></use>
+                      </svg>
+                      <svg class="team__social-icon">
+                        <use xlink:href="img/sprite.svg#telegram"></use>
+                      </svg>
+                      <svg class="team__social-icon">
+                        <use xlink:href="img/sprite.svg#discord"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!--FAQ-->
+    <section class="section-faq">
+      <div class="row">
+        <h3 class="heading-tertiary">FAQ</h3>
+        <h4 class="heading-4 mb-hg">Suaerat numquam ad consequatur</h4>
+
+        <!-- Accordion -->
+        <div class="accordion">
+          <div class="accordion__panel">
+            <h3 class="accordion__header">
+              <svg class="accordion__icon">
+                <use xlink:href="img/sprite.svg#plus"></use>
+              </svg>
+              Lorem ipsum dolor sit amet
+            </h3>
+            <div class="accordion__body">Ut eu auctor purus. Phasellus sagittis magna et lorem finibus, sed volutpat tortor dignissim. Pellentesque eget sagittis nisl. Proin ullamcorper, erat et pellentesque placerat, orci tellus faucibus nunc, nec rhoncus augue lorem ac ante. Pellentesque porttitor mattis est, id tincidunt erat pulvinar vitae.</div>
+          </div>
+
+          <div class="accordion__panel">
+            <h3 class="accordion__header">
+              <svg class="accordion__icon">
+                <use xlink:href="img/sprite.svg#plus"></use>
+              </svg>
+              Curabitur velit neq placerat
+            </h3>
+            <div class="accordion__body">Sed eu ligula condimentum orci consequat vestibulum id nec dui. Nullam auctor, est sed aliquet rutrum, nisi nisi scelerisque velit, ornare vestibulum felis mi viverra est. Mauris efficitur dictum lacinia. Nullam volutpat volutpat viverra. Nulla rhoncus nisl sit amet pretium vulputate. Vestibulum quis ante in ex elementum rhoncus. Nullam est sapien, facilisis at luctus vitae, iaculis at neque. Aliquam volutpat gravida arcu, vel lacinia velit pellentesque nec. Ut venenatis quis purus et sagittis.</div>
+          </div>
+
+          <div class="accordion__panel">
+            <h3 class="accordion__header">
+              <svg class="accordion__icon">
+                <use xlink:href="img/sprite.svg#plus"></use>
+              </svg>  
+              Nunc quis ex eu massa
+            </h3>
+            <div class="accordion__body">Nulla at erat congue mauris ultricies ultricies et et libero. Sed sollicitudin condimentum egestas.</div>
+          </div>
+
+          <div class="accordion__panel">
+            <h3 class="accordion__header">
+              <svg class="accordion__icon">
+                <use xlink:href="img/sprite.svg#plus"></use>
+              </svg> 
+              Vestibulum at laoreet diam
+            </h3>
+            <div class="accordion__body">Cras interdum erat id tincidunt cursus. Curabitur ornare, neque in molestie euismod, elit diam finibus nunc, nec rhoncus neque nunc nec lorem.</div>
+          </div>
+
+          <div class="accordion__panel">
+            <h3 class="accordion__header">
+              <svg class="accordion__icon">
+                <use xlink:href="img/sprite.svg#plus"></use>
+              </svg>
+              Morbi ultrices orci efficitur
+            </h3>
+            <div class="accordion__body">In efficitur neque nibh, in consectetur diam elementum eu. Donec porttitor eget justo a mollis. Proin et ultrices nunc, id commodo velit. Vivamus efficitur sollicitudin libero sit amet dapibus. Integer condimentum quam sit amet lacinia placerat.</div>
+          </div>
+
+          <div class="accordion__panel">
+            <h3 class="accordion__header">
+              <svg class="accordion__icon">
+                <use xlink:href="img/sprite.svg#plus"></use>
+              </svg>
+              Donec porttitor eget?
+            </h3>
+            <div class="accordion__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos quo dolores minima qui ducimus magnam natus facere eligendi, tempora voluptatem maiores unde libero harum! Adipisci dignissimos animi magni veniam pariatur!</div>
+          </div>
+        </div>
+      </div>
+
+      <img class="floating-img" src="img/planet.svg" alt="Planet Magnoverse">
+    </section>
+
+    <!--Contact-->
+    <section class="section-contact">
+      <div class="row">
+        <h3 class="heading-tertiary">Contact</h3>
+        <h4 class="heading-4 mb-hg">Imperdiet sem eget, egestas sapien</h4>
+
+        <!--Form-->
+        <form class="form" id="form">
+          <div class="form__2-col">
+            <div class="form__group">
+              <input
+                type="text"
+                class="form__input"
+                placeholder="Name"
+                id="name"
+                required
+              />
+              <label for="name" class="form__label">Name</label>
+            </div>
+
+            <div class="form__group">
+              <input
+                type="email"
+                class="form__input"
+                placeholder="Email"
+                id="email"
+                required
+              />
+              <label for="email" class="form__label">Email</label>
+            </div>
+          </div>
+  
+          <div class="form__group">
+            <textarea id="description" name="description" class="form__input form__input-description" placeholder="Description" required></textarea>
+            <label for="description" class="form__label">Description</label>
+          </div>
+  
+          <div class="form__group">
+            <button class="btn btn--primary" type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    
+    <!--Footer-->
+    <footer class="footer">
+      <div class="row">
+        <div class="footer__el-left">
+          <img class="footer__logo" src="img/magnoverse_symbol.svg" alt="Magnoverse">
+
+          <!--Nav-->
+          <ul class="footer__nav">
+            <li class="footer__nav-item home-btn">Home</li>
+            <li class="footer__nav-item about-btn">About</li>
+            <li class="footer__nav-item roadmap-btn">Roadmap</li>
+            <li class="footer__nav-item team-btn">Team</li>
+            <li class="footer__nav-item faq-btn">FAQ</li>
+            <li class="footer__nav-item contact-btn">Contact</li>
+          </ul>
+        </div>
+
+        <div class="footer__el-right">
+          <!--Social-->
+          <div class="footer__social">
+            <a class="footer__social-link" href="#">
+              <svg class="footer__social-icon">
+                <use xlink:href="img/sprite.svg#twitter"></use>
+              </svg>
+            </a>
+            <a class="footer__social-link" href="#">
+              <svg class="footer__social-icon">
+                <use xlink:href="img/sprite.svg#discord"></use>
+              </svg>
+            </a>
+            <a class="footer__social-link" href="#">
+              <svg class="footer__social-icon">
+                <use xlink:href="img/sprite.svg#telegram"></use>
+              </svg>
+            </a>
+          </div>
+
+          <span class="footer__copyright">© 2021 Magnoverse</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

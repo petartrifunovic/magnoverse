@@ -1,0 +1,92 @@
+%default {
+  padding: 12rem 0;
+  text-align: center;
+
+  @include respond(tab-land-big) {
+    padding: 12rem 3rem;
+  }
+
+  @include respond(phone-big) {
+    padding: 12rem 1rem;
+  }
+}
+
+.section-about {
+  @extend %default;
+  background-color: $color-tertiary-1;
+  text-align: left;
+
+  @include respond(tab-port-big) {
+    padding-bottom: 28rem;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+
+    @include respond(tab-port-big) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.section-roadmap {
+  @extend %default;
+  background-color: $color-tertiary-2;
+
+  .row {
+    position: relative;
+
+    .heading-tertiary,
+    .heading-4 {
+      z-index: 2;
+    }
+  }
+}
+
+.section-team {
+  @extend %default;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-tertiary-1, 0.8),
+      rgba($color-tertiary-3, 0.8)
+    ),
+    url(https://i.ibb.co/Q9V5VBR/space-background.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  @include respond(phone-big) {
+    background-attachment: initial;
+  }
+
+  .row {
+    overflow: hidden;
+  }
+}
+
+.section-faq {
+  @extend %default;
+  background-color: $color-tertiary-1;
+  position: relative;
+
+  .heading-tertiary,
+  .heading-4 {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.section-contact {
+  @extend %default;
+  background-color: $color-tertiary-1;
+
+  .heading-tertiary,
+  .heading-4 {
+    position: relative;
+    z-index: 2;
+  }
+}
